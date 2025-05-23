@@ -33,7 +33,10 @@ func SetupRoutes(r *gin.Engine) {
 
 	userGroup := r.Group("/user")
 	userGroup.Use(middlewares.JWTAuthMiddleware())
-	userGroup.Any("/*proxyPath", ReverseProxy("http://user-service:9000"))
+	userGroup.Any("/*proxyPath", ReverseProxy("http://localhost:9000"))
+
+	authGroup := r.Group("/auth")
+	authGroup.Any("/*proxyPath", ReverseProxy("http://localhost:9001"))
 
 	// Add more routes for other services here similarly
 }
