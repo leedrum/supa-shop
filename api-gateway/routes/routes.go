@@ -38,5 +38,8 @@ func SetupRoutes(r *gin.Engine) {
 	authGroup := r.Group("/auth")
 	authGroup.Any("/*proxyPath", ReverseProxy("http://localhost:9001"))
 
+	productGroup := r.Group("/product")
+	productGroup.Any("/*proxyPath", ReverseProxy("http://localhost:9002"))
+
 	// Add more routes for other services here similarly
 }
