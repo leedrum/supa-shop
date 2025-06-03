@@ -1,4 +1,4 @@
-module github.com/leedrum/supa-shop/services/auth-service
+module github.com/leedrum/supa-shop/services/auth
 
 go 1.23.0
 

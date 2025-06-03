@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/leedrum/supa-shop/services/auth-service/db"
-	"github.com/leedrum/supa-shop/services/auth-service/models"
-	"github.com/leedrum/supa-shop/services/auth-service/utils"
+	"github.com/leedrum/supa-shop/services/auth/db"
+	"github.com/leedrum/supa-shop/services/auth/models"
+	"github.com/leedrum/supa-shop/services/auth/utils"
 	"golang.org/x/crypto/bcrypt"
 
 	"github.com/gin-gonic/gin"

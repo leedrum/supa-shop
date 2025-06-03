@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/leedrum/supa-shop/services/auth-service/models"
+	"github.com/leedrum/supa-shop/services/auth/models"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

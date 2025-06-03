@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/leedrum/supa-shop/services/auth-service/db"
-	"github.com/leedrum/supa-shop/services/auth-service/handlers"
+	"github.com/leedrum/supa-shop/services/auth/db"
+	"github.com/leedrum/supa-shop/services/auth/handlers"
 
 	"github.com/gin-gonic/gin"
 )
