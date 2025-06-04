@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"net/http"
 	"time"
 
@@ -60,6 +61,7 @@ func Register(c *gin.Context) {
 	user.Password = string(hashedPassword)
 
 	if err := db.DB.Create(&user).Error; err != nil {
+		fmt.Println(err)
 		c.JSON(http.StatusConflict, gin.H{"error": "Please try later"})
 	}
 
