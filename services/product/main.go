@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/leedrum/supa-shop/services/product/db"
 	"github.com/leedrum/supa-shop/services/product/handlers"
+	"github.com/leedrum/supa-shop/services/product/kafka/consumers"
 
 	"github.com/gin-gonic/gin"
 )
@@ -13,6 +14,6 @@ func main() {
 
 	r.POST("/create", handlers.Create)
 	r.DELETE("/delete/:id", handlers.Delete)
-
-	r.Run(":9002")
+	consumers.Start()
+	r.Run(":9003")
 }

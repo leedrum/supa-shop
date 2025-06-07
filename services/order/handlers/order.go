@@ -44,7 +44,7 @@ func Create(c *gin.Context) {
 		return
 	}
 
-	outboxEvent := models.OutboxEvent{
+	outboxEvent := models.Outbox{
 		ID:            uuid.New(),
 		AggregateType: "order",
 		AggregateID:   order.ID.String(),
