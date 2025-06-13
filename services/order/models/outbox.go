@@ -7,7 +7,7 @@ import (
 	"gorm.io/datatypes"
 )
 
-type OutboxEvent struct {
+type Outbox struct {
 	ID            uuid.UUID      `gorm:"type:uuid;primaryKey"`
 	AggregateType string         // e.g., "order"
 	AggregateID   string         // order ID
